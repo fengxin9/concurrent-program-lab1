@@ -1,22 +1,62 @@
 # include <iostream>
+# include <windows.h>
 using namespace std;
 
+double matrix_product(int **mat, int *a, int *sum, int n) {
+    long long head, tail, freq;
+    QueryPerformanceFrequency((LARGE_INTEGER *)&freq);  // 获取计时器频率
+    QueryPerformanceCounter((LARGE_INTEGER *)&head);    // 计时器初始值
+
+    for(int i=0;i<n;i++){
+        sum[i] = 0;
+        for(int j=0;j<n;j++){
+            sum[i] += mat[j][i] * a[j];    
+        }
+    }
+    QueryPerformanceCounter((LARGE_INTEGER *)&tail);    // 计时器结束值
+    double time = (double)(tail - head) / freq;  // 计算运行时间
+
+    return time;
+}
+
+const int n=100;
+
 int main(){
-    int mat[100][100];  // 设置固定的测试数据，便于比较分析
-    for(int i=0; i<100; i++){
-        for(int j=0; j<100; j++){
+    int m;
+    cout << "Input test rounds:";
+    cin >> m;
+    double time_sum=0;
+
+    for(int k=0; k<m; k++) {
+    int **mat=new int*[n]; 
+    for(int i=0; i<n; i++){
+        mat[i] = new int[n];
+        for(int j=0; j<n; j++){
             mat[i][j] = i + j;  // 填充测试数据
         }
     }
-    int a[100];
-    for(int i=0;i<100;i++){
-        a[i] = i;          // 初始化给定向量
+    int *a=new int[n];
+    for(int i=0;i<n;i++){
+        a[i] = i;     // 初始化给定向量
     }
-    int sum[100] = {0};
-    for(int i=0;i<100;i++){
-        for(int j=0;j<100;j++){
-            sum[i] += mat[j][i] * a[j];    // 计算内积
-        }
+
+    /* 算法实现与计时 */
+    int *sum=new int[n];        
+    time_sum += matrix_product(mat, a, sum, n);
+
+
+    /* 释放内存 */
+    delete[] a;               
+    delete[] sum;
+    for(int i=0;i<n;i++){
+        delete[] mat[i];
     }
+    delete[] mat;
+}
+    cout << "Total time: " << time_sum << " seconds" << endl;
+    cout << "Average time: " << time_sum / m << " seconds" << endl;
+
     return 0;
 }
+
+// 编译选项：g++ -O2 matrix_ordinary.cpp -o mo.exe
