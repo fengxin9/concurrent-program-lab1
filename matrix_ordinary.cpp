@@ -3,7 +3,7 @@
 # include <fstream>
 using namespace std;
 
-double matrix_product(int **mat, int *a, int *sum, int n, ofstream& outfile) {
+double matrix_product(int **mat, int *a, long long *sum, int n, ofstream& outfile) {
     long long head, tail, freq;
     QueryPerformanceFrequency((LARGE_INTEGER *)&freq);  // 获取计时器频率
     QueryPerformanceCounter((LARGE_INTEGER *)&head);    // 计时器初始值
@@ -55,7 +55,7 @@ int main(){
     }
 
     /* 算法实现与计时 */
-    int *sum=new int[n];        
+    long long *sum=new long long[n];        
     time_sum += matrix_product(mat, a, sum, n, mat_ordinary_file);
 
     /* 释放内存 */
