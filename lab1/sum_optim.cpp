@@ -77,7 +77,7 @@ int main() {
         }
 
         long long sum = 0;      
-        time_sum += eight_chain(a, sum, n, file);
+        time_sum += four_chain(a, sum, n, file);
 
         delete[] a;
     }
