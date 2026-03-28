@@ -1,0 +1,28 @@
+* db3f249 - 2026-03-29 - 加入汇编程序文件
+* 90e26af - 2026-03-28 - 实验2完成
+* f1d35eb - 2026-03-28 - 完成递归算法
+* 3258fa5 - 2026-03-28 - 完成sum平凡算法
+* 5d6286a - 2026-03-28 - 完成实验1
+* d72dd32 - 2026-03-28 - python绘图实验1
+* 680b95c - 2026-03-28 - Rename matrix_cache_linux.cpp to lab1/matrix_cache_linux.cpp
+* 85cef94 - 2026-03-28 - Merge branch 'main' of https://github.com/fengxin9/parallel-program-lab
+* 8def0ba - 2026-03-28 - 完成了cache算法在linux和ARM平台的编译测试
+* f39360c - 2026-03-28 - Delete .vscode directory
+* ff76673 - 2026-03-28 - Delete lab1/keep
+* a646cec - 2026-03-28 - Rename .gitignore to lab1/.gitignore
+* ce12397 - 2026-03-28 - Rename matrix_ordinary.cpp to lab1/matrix_ordinary.cpp
+* bedd55c - 2026-03-28 - Rename matrix_ord_linux.cpp to lab1/matrix_ord_linux.cpp
+* 7a45ed9 - 2026-03-28 - Rename matrix_cache.cpp to lab1/matrix_cache.cpp
+* 8be1476 - 2026-03-28 - Create keep
+* 859e808 - 2026-03-28 - Delete ordinary_results.txt
+* c5e8da1 - 2026-03-28 - Delete mo3.exe
+* 4036915 - 2026-03-28 - Delete mo2.exe
+* e99dee5 - 2026-03-28 - Delete mo0.exe
+* 2715d2a - 2026-03-28 - Delete mo.exe
+* 390233a - 2026-03-28 - 完成了linux和ARM平台的编译测试
+* 179be68 - 2026-03-28 - 完成了矩阵内积的cache算法
+* 6ab28b0 - 2026-03-27 - 完成平凡算法的性能测试
+* 27e5b19 - 2026-03-27 - 将运算结果写入文件
+* 707744e - 2026-03-22 - 函数封装，windows计时
+* dc8e0d1 - 2026-03-22 - 实现矩阵内积的平凡算法
+* 9b58e49 - 2026-03-22 - 添加.gitignore文件
