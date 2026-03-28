@@ -77,6 +77,7 @@ int main(){
     return 0;
 }
 
-// 编译选项：g++ -O matrix_cache.cpp -o mo.exe
+// 编译选项：g++ -O0 matrix_cache.cpp -o mo0.exe
+// g++ -O matrix_cache.cpp -o mo.exe
 // g++ -O2 matrix_cache.cpp -o mo2.exe
 // g++ -O3 matrix_cache.cpp -o mo3.exe
