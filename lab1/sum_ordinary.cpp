@@ -3,7 +3,7 @@
 #include <fstream>
 using namespace std;
 
-double two_chain(int *a, long long &sum, int n, ofstream& outfile) {
+double sum_ord(int *a, long long &sum, int n, ofstream& outfile) {
     long long head, tail, freq;
     QueryPerformanceFrequency((LARGE_INTEGER *)&freq);
     QueryPerformanceCounter((LARGE_INTEGER *)&head);
@@ -39,7 +39,7 @@ int main() {
         }
 
         long long sum = 0;      
-        time_sum += two_chain(a, sum, n, file);
+        time_sum += sum_ord(a, sum, n, file);
 
         delete[] a;
     }
