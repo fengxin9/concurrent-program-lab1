@@ -60,8 +60,6 @@ double eight_chain(int *a, long long &sum8, int n, ofstream& outfile) {
     return time;
 }
 
-
-
 int main() {
     int m=10000;
     
@@ -79,7 +77,7 @@ int main() {
         }
 
         long long sum = 0;      
-        time_sum += two_chain(a, sum, n, file);
+        time_sum += eight_chain(a, sum, n, file);
 
         delete[] a;
     }
