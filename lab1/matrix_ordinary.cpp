@@ -76,6 +76,6 @@ int main(){
 }
 
 // 编译选项：g++ -O0 matrix_ordinary.cpp -o mo0.exe
-//g++ -O matrix_ordinary.cpp -o mo.exe
+// g++ -O matrix_ordinary.cpp -o mo.exe
 // g++ -O2 matrix_ordinary.cpp -o mo2.exe
 // g++ -O3 matrix_ordinary.cpp -o mo3.exe
