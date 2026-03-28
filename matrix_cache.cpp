@@ -8,12 +8,14 @@ double matrix_product(int **mat, int *a, long long *sum, int n, ofstream& outfil
     QueryPerformanceFrequency((LARGE_INTEGER *)&freq);  // 获取计时器频率
     QueryPerformanceCounter((LARGE_INTEGER *)&head);    // 计时器初始值
 
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++)
         sum[i] = 0;
+    for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
-            sum[i] += mat[j][i] * a[j];    
+            sum[j] += mat[i][j] * a[i];    
         }
     }
+
     // 将结果写入文件，防止编译器优化
     for(int i = 0; i < n; i++) {
         outfile << sum[i] << " ";
@@ -75,7 +77,6 @@ int main(){
     return 0;
 }
 
-// 编译选项：g++ -O0 matrix_ordinary.cpp -o mo0.exe
-//g++ -O matrix_ordinary.cpp -o mo.exe
-// g++ -O2 matrix_ordinary.cpp -o mo2.exe
-// g++ -O3 matrix_ordinary.cpp -o mo3.exe
+// 编译选项：g++ -O matrix_cache.cpp -o mo.exe
+// g++ -O2 matrix_cache.cpp -o mo2.exe
+// g++ -O3 matrix_cache.cpp -o mo3.exe
