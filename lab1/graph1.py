@@ -81,7 +81,6 @@ for idx, opt in enumerate(opts):
     
 
 # 添加总标题
-fig.suptitle('不同优化级别下平凡算法与cache算法的性能对比', fontsize=16, fontweight='bold')
 plt.tight_layout()
 plt.savefig('lab1/graph1_Ocomp.png', dpi=300, bbox_inches='tight')
 plt.show()
